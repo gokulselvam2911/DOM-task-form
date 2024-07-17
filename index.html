@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation with Forms</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+<div class="container mt-5">
+    <h1 id="title">DOM Manipulation with Forms</h1>
+    <p id="description">This task involves creating a form and a table. Users can fill out the form, and the submitted data will be displayed in the table below.</p>
+    <h2>Form</h2>
+    <form id="form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="first-name">First Name</label>
+                <input type="text" class="form-control" id="first-name" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="last-name">Last Name</label>
+                <input type="text" class="form-control" id="last-name" placeholder="Enter your last name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="pincode">Pincode</label>
+                <input type="text" class="form-control" id="pincode" placeholder="Enter your Pincode" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="country">Country</label>
+                <input type="text" class="form-control" id="country" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <div>
+                <input type="radio" name="gender" class="gender" id="gender-male" value="Male" required> Male
+                <input type="radio" name="gender" id="gender-female" value="Female"> Female
+                <input type="radio" name="gender" id="gender-others" value="Others"> Others
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="food">Choice of Food (Choose at least 2)</label>
+            <div>
+                <input type="checkbox" class="food" id="food1" value="CHAPATHY"> CHAPATHY
+                <input type="checkbox" class="food" id="food2" value="DOSA"> DOSA
+                <input type="checkbox" class="food" id="food3" value="IDLY"> IDLY
+                <input type="checkbox" class="food" id="food4" value="PONGAL"> PONGAL
+                <input type="checkbox" class="food" id="food5" value="POORI"> POORI
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+    </form>
+
+    <h2 class="mt-5">Table</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Gender</th>
+                <th>Food</th>
+                <th>State</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Table rows will be appended here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
